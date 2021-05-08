@@ -71,7 +71,8 @@ public class UserServiceImpl implements UserService {
             return false;
         }
 
-        return userRepo.deleteByUsername(username);
+        final int result= userRepo.deleteByUsername(username);
+        return result > 0;
     }
 
     private void fillUser(final UserDto dto,  final User user) {
