@@ -1,5 +1,7 @@
 package com.kashyap.moviereview.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.Column;
 
 public class UserDto {
@@ -7,6 +9,8 @@ public class UserDto {
     private String firstname;
     private String lastname;
     private String username;
+
+    @JsonIgnore
     private String password;
     private String email;
     private long mobileNo;
